@@ -19,14 +19,14 @@ import javax.servlet.annotation.WebServlet;
 @WebServlet(urlPatterns = "/login")
 public class Login extends HttpServlet {
     private boolean makeQueryToDB(String username, String password) {
-        String databaseUrl = "jdbc:mysql://localhost:5042/distributed?user=" + "user1" + "&password=" + "123456789";
+        String databaseUrl = "jdbc:mysql://localhost:5042/database1?user=" + "user1" + "&password=" + "123456789";
         Connection conn = null;
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(databaseUrl);
             System.out.println("Connected to database");
-            PreparedStatement st = conn.prepareStatement("SELECT * FROM login WHERE username= ? AND password = ?");
+            PreparedStatement st = conn.prepareStatement("SELECT * FROM authentication WHERE username= ? AND password = ?");
             st.setString(1, username);
             st.setString(2, password);
             ResultSet res = st.executeQuery();
