@@ -36,7 +36,7 @@ public class Staff3 {
                 String nickname = e.getElementsByTagName("nickname").item(0).getTextContent();
                 String salary = e.getElementsByTagName("salary").item(0).getTextContent();
                 String id = e.getAttribute("id");
-                String currency = e.getAttribute("currency");
+                String currency = ((Element) e.getElementsByTagName("salary").item(0)).getAttribute("currency");
                 System.out.println("ID : " + id);
                 System.out.println("First Name : " + firstname);
                 System.out.println("Last Name : " + lastname);
