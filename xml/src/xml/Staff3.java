@@ -31,16 +31,16 @@ public class Staff3 {
 			for(int i=0; i<nl.getLength();i++) {
 				Node node = nl.item(i);
 				Element e= (Element) node;
-				String firstname = e.getElementsByTagName("firstname").item(0).getTextContent();
-				String lastname = e.getElementsByTagName("lastname").item(0).getTextContent();
-				String nickname = e.getElementsByTagName("nickname").item(0).getTextContent();
+				String firstName = e.getElementsByTagName("firstname").item(0).getTextContent();
+				String lastName = e.getElementsByTagName("lastname").item(0).getTextContent();
+				String nickName = e.getElementsByTagName("nickname").item(0).getTextContent();
 				String salary = e.getElementsByTagName("salary").item(0).getTextContent();
 				String id = e.getAttribute("id");
 				String currency = ((Element) e.getElementsByTagName("salary").item(0)).getAttribute("currency");
 				System.out.println("ID : " + id);
-				System.out.println("First Name : " + firstname);
-				System.out.println("Last Name : " + lastname);
-				System.out.println("NickName : " + nickname);
+				System.out.println("First Name : " + firstName);
+				System.out.println("Last Name : " + lastName);
+				System.out.println("NickName : " + nickName);
 				System.out.println("salary and curency  : " + salary + "-" + currency +"\n");
 			}
 			
