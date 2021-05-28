@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<staff>
+    <firstname>Peter</firstname>
+    <lastname>White</lastname>
+    <nickname>mkyong</nickname>
+    <salary currency="USD">100000</salary>
+</staff>
